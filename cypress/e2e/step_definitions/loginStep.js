@@ -5,6 +5,9 @@ import { LoginPage } from "../../pages/loginPage";
 const oLoginPage = new LoginPage();
 
 Given("que acesso o portal OrangeHRM", () => {
+    cy.clearAllCookies()
+    cy.clearAllLocalStorage()
+    cy.clearAllSessionStorage()
     cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 })
 
@@ -17,6 +20,9 @@ Given("devo ser redirecionado para a home logada da aplicacao OrangeHRM {string}
 })
 
 Given("que acesso o portal saucedemo", () => {
+    cy.clearAllCookies()
+    cy.clearAllLocalStorage()
+    cy.clearAllSessionStorage()
     cy.visit("https://www.saucedemo.com/")
 })
 
